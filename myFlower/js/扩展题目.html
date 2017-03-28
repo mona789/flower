@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="jquery/jquery.js"></script>
+</head>
+<style>
+#id{
+    float: left;
+    background: red;
+}
+    .shw {
+        display: block;
+    }
+
+    .hid {
+        display: none;
+    }
+</style>
+<body>
+<div class="hid" id="id">你好</div>
+<div id="mn">hello</div>
+<script>
+    //function $(element) {
+    //    this.ele=element;
+    //}
+    console.log($.prototype);
+    $(function () {
+
+        $.prototype.tooltip = function (mes) {
+            console.log(this);
+            constructor = $;
+            this[0].onmousemove = function () {
+                $('#id').removeClass('hid')
+                $('#id').addClass('shw')
+            }
+            this[0].onmouseout = function () {
+                $('#id').removeClass('shw')
+                $('#id').addClass('hid')
+            }
+            console.log(this);
+        }
+        console.log($('#mn'));
+        $('#mn').tooltip('你好');
+    });
+
+
+</script>
+</body>
+</html>

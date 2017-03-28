@@ -40,8 +40,6 @@ clearInterval(timer);
                console.log(i);
                $('.line').css({'transform':'rotateY('+90*i+'deg)','transition':'all 2s'});
                 console.log(456);
-
-
             },200)
         };
 
